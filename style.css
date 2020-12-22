@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Rubik&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(./img/tablebg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: 'Rubik', sans-serif;
+
+}
+
+.btn {
+  font-family: 'Rubik', sans-serif;
+  background: rgb(204, 22, 67);
+  font-family: 'Rubik', sans-serif;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: .2rem 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background: white;
+  color: rgb(204, 22, 67);
+  border: 1px solid rgb(204, 22, 67);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
+  background: rgb(22, 138, 135);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 45px;
+  margin-bottom: 1rem;
+  border-radius: 0 0 5px 5px;
+}
+
+.heading {
+  font-size: 2rem;
+  letter-spacing: 15px;
+  color: rgb(255, 255, 255);
+  margin-bottom: 1rem;
+  font-family: 'Bungee Outline', cursive;
+}
+
+.game-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.timer,
+.move-counter {
+  background-color: white;
+  color: black;
+  width: 120px;
+  padding: 5px 20px;
+  text-align: center;
+  border: 1px solid rgb(7, 7, 7);
+  border-radius: 5px;
+}
+
+.game-board {
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.game-grid-row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.game-card {
+  width: 100px;
+  height: 100px;
+  background: url(./img/card-bg.png) center/cover no-repeat;
+  border-radius: 5px;
+  margin: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-card:hover {
+  box-shadow: 2px 2px 4px 2px #999;
+}
+
+.game-card-img {
+  visibility: hidden;
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+}
+
+.show-img {
+  visibility: visible;
+}
+
+.restart {
+  max-width: 50%;
+  text-align: center;
+}
+
+.match {
+  border: 4px solid rgb(39, 223, 39);
+}
+
+/* Game Results */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  width: 50%;
+  margin: auto;
+  padding: 10px;
+  position: relative;
+  top: 15%;
+  background-color: #f5f4f2;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.modal-header {
+  border-bottom: 1px solid #D7CCC8;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgb(32, 184, 208);
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-body .message {
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+
+.modal-body .message p {
+  margin-bottom: 0.5rem;
+}
+
+#totalGameMoves,
+#totalGameTime {
+  color: rgb(228, 41, 97);
+  font-weight: 600;
+}
+
+.modal-footer {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding: 0 1rem 1.5rem;
+}
+
+.close {
+  font-size: 2rem;
+  float: right;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: rgb(228, 41, 97);
+  position: relative;
+  transition: color 0.3 ease-in-out;
+  cursor: pointer;
+}
+
+.close:hover{
+  color: rgb(32, 184, 208);
+}
+
+.fa-star {
+  color: rgb(255, 166, 0);
+}
+
+

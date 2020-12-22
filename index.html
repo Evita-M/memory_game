@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory game</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+  <script src="app.js" defer></script>
+
+  
+</head>
+<body>
+
+<section class="main">
+  <div class="info">
+        <h1 class="heading">Memory Game</h1>
+        <div class="game-details">
+            <span class="move-counter" id="moveCounter">0 moves</span>
+            <span class="timer" id="timer">0:00</span>
+            <button class="btn" id="restartBtn" onclick="reset()">Restart</button>
+        </div>
+    </div>
+
+    <table class="game-board">
+      <tbody class="game-grid">
+          <tr class="game-grid-row">
+              <td class="game-card">
+                  <img class="game-card-img" src="img/bear.jpg" alt="bear">
+              </td>
+              <td class="game-card">
+                  <img class="game-card-img" src="img/dog.jpg" alt="dog">
+              </td>
+              <td class="game-card">
+                  <img class="game-card-img" src="img/cat.jpg" alt="cat">
+              </td>
+              <td class="game-card">
+                  <img class="game-card-img" src="img/horse.jpg" alt="horse">
+              </td>
+          </tr>
+          <tr class="game-grid-row">
+              <td class="game-card">
+                  <img class="game-card-img" src="img/duck.jpg" alt="duck">
+              </td>
+              <td class="game-card">
+                  <img class="game-card-img" src="img/fish.jpg" alt="fish">
+              </td>
+              <td class="game-card">
+                  <img class="game-card-img" src="img/cat.jpg" alt="cat">
+              </td>
+              <td class="game-card">
+                  <img class="game-card-img" src="img/cow.jpg" alt="cow">
+              </td>
+          </tr>
+          <tr class="game-grid-row">
+              <td class="game-card">
+                  <img class="game-card-img" src="img/rabbit.jpg" alt="rabbit">
+              </td>
+              <td class="game-card">
+                  <img class="game-card-img" src="img/bear.jpg" alt="bear">
+              </td>
+              <td class="game-card">
+                  <img class="game-card-img" src="img/duck.jpg" alt="duck">
+              </td>
+              <td class="game-card">
+                  <img class="game-card-img" src="img/dog.jpg" alt="dog">
+              </td>
+          </tr>
+          <tr class="game-grid-row">
+              <td class="game-card">
+                  <img class="game-card-img" src="img/fish.jpg" alt="fish">
+              </td>
+              <td class="game-card">
+                  <img class="game-card-img" src="img/cow.jpg" alt="cow">
+              </td>
+              <td class="game-card">
+                  <img class="game-card-img" src="img/horse.jpg" alt="horse">
+              </td>
+              <td class="game-card">
+                  <img class="game-card-img" src="img/rabbit.jpg" alt="rabbit">
+              </td>
+          </tr>
+      </tbody>               
+  </table>
+  </section>
+
+    <div class="modal">
+      <div class="modal-content">
+          <span aria-label="close" role="button" class="close" id="closeModal" onclick="closeModal()">&times;</span>
+          <div class="modal-header">
+              <h2>Game Over</h2>
+          </div>
+          <div class="modal-body">
+              <div class="message">
+                  <p><strong>Congratulations!</strong></p>
+                  <p>You completed the game using <span id="totalGameMoves"></span>
+                    in <span id="totalGameTime"></span>
+                  </p>
+                  <p>Your rating is: <span id="finalRating"></span></p>
+              </div>
+          </div>
+          <div class="modal-footer">
+              <button class="btn" onclick="reset()">Play Again</button>
+          </div>
+      </div>
+  </div>
+
+<audio id="match-sound">   
+    <source src="sounds/match.wav"/>   
+</audio>  
+
+
+</body>
+</html>
